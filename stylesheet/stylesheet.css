@@ -484,6 +484,9 @@
         padding: 20px 0 20px 0;
         letter-spacing: normal;
       }
+      .home{
+        min-height: 900px;
+      }
       .container{
       flex-direction: column-reverse;
       }
@@ -497,6 +500,9 @@
       .col1 h1{
           font-size: 40px;
       }
+      .home h6{
+        margin-top: 10px;
+    }
       .buttons{
           justify-content: space-around;
           padding: 0;
@@ -505,7 +511,8 @@
           width: 100%;
           display: flex;
           justify-content: center;
-          height: 400px;
+          height: auto;
+          padding: 0 0 20px 0;
       }
       .col2 img{
           width: 200px;
