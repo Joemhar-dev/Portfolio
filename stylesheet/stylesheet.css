@@ -217,11 +217,11 @@
   }
   .education{
       width: 400px !important; 
-      background: rgba(0, 0, 0, 0.8);;
+      background: rgba(0, 0, 0, 0.8);
       padding: 20px;
       border: .03px solid #1e272e;
+      height: 400px;
       border-radius: 7px;
-      position: relative;
   }
   .education ul{
       list-style: none;
@@ -522,8 +522,11 @@
           margin-top: 0;
       }
       .tech img{
-          width: 30px;
-          height: 30px;
+          width: 25px;
+          height: 25px;
+      }
+      .background{
+        flex-direction: column;
       }
       .project-container{
           gap: 0;

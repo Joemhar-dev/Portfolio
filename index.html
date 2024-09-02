@@ -7,10 +7,26 @@
     <link rel="icon" type="image/x-icon" href="pictures/myphoto.png">
     <link rel="stylesheet" href="stylesheet/stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
 </head>
 <body>
 <!--header section-->
-    <header class="header">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+ <!-- Initialize AOS -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({
+            // Global settings:
+            duration: 1200, // Duration of animations (in ms)
+            easing: 'ease', // Easing function for animations
+            once: true, // Whether animation should happen only once - while scrolling down
+            mirror: false // Whether elements should animate out while scrolling past them
+        });
+    });
+</script>
+    <header class="header" data-aos="fade-down" data-aos-duration="1000">
         <div class="name">
             <img src="pictures/man.png">
             <a href="#home">JOEMHAR SALES</a>
@@ -27,7 +43,7 @@
     <!--Home Section-->
     <section id="home" class="home">
         <div class="container">
-            <div class="col1">
+            <div class="col1" data-aos="slide-up" data-aos-duration="1000">
             <h6>Hi!<img src="pictures/hi.png">, I'm Joemhar Sales.</h6>
             <h1>Web <b style="color: #FEA47F;">Developer</b></h1>
             <p>If you'd like to collaborate or have any questions,
@@ -45,7 +61,7 @@
             </div>
             
             </div>
-            <div class="col2">
+            <div class="col2" data-aos="slide-right" data-aos-duration="1000">
                 <img src="pictures/myphoto.png">
             </div>
         </div>
@@ -53,11 +69,11 @@
     </section>
     <!--About Section-->
     <section id="about" class="about">
-    <h2> About <b style="color: #FEA47F;">Me</b></h2>
-    <div>
+    <h2 data-aos="slide-right" data-aos-duration="1000"> About <b style="color: #FEA47F;">Me</b></h2>
+    <div data-aos="zoom-in" data-aos-duration="1000">
         <p>As a seasoned web developer with expertise in HTML, CSS, JavaScript, Php, WordPress, and Wix, I offer comprehensive web development solutions tailored to meet your needs. Whether you're looking to create a stunning new website, enhance an existing one, or develop a custom web application, I can help you achieve your goals with precision and creativity.</p>
     </div>
-    <div>
+    <div data-aos="zoom-in" data-aos-duration="1000">
         <p style="color: #FEA47F; font-size:25px;"><b>What I Offer.</b></p>
 
         <ul style="padding-left: 20px;">
@@ -70,7 +86,7 @@
             <li><p><b>Ongoing Maintenance and Support:</b> After your website is live, I offer continued support and maintenance to keep it updated, secure, and performing optimally. I am available for updates, bug fixes, and any other needs that arise.</p></li>
         </ul>
     </div>
-    <div>
+    <div data-aos="zoom-in" data-aos-duration="1000">
         <p style="color: #FEA47F; font-size:25px;"><b>Why Choose Me?.</b></p>
 
         <ul style="padding-left: 20px;">
@@ -80,7 +96,7 @@
         </ul>
     </div>
     <div class="background">
-     <div class="education">
+     <div class="education" data-aos="zoom-in" data-aos-duration="1000">
         <p style="color: #FEA47F; font-size:25px;"><b>Educational Background</b></p>
         <ul style="padding-left: 20px;">
             <li><img src="pictures/course.svg"> Bachelor of Sceince in Information Technology</li>
@@ -95,14 +111,14 @@
             <li><img src="pictures/list-style.svg">2023</li>
             <li><img src="pictures/medal.png"><a href="#"> Certicate</a></li>
         </ul>
-        <p style="color: #FEA47F; font-size:25px;"><b>Examination</b></p>
+        <!-- <p style="color: #FEA47F; font-size:25px;"><b>Examination</b></p>
         <ul style="padding-left: 20px;">
             <li><img src="pictures/education.svg">Career Service Professional Examination</li>
             <li><img src="pictures/list-style.svg">2023</li>
             <li><img src="pictures/medal.png"><a href="#"> Certicate</a></li>
-        </ul> 
+        </ul>  -->
      </div>
-     <div class="education">
+     <div class="education" data-aos="zoom-in" data-aos-duration="1000">
         <p style="color: #FEA47F; font-size:25px;"><b>Work History</b></p>
         <ul style="padding-left: 20px;">
             <li><img src="pictures/work.png">IT Support</li>
@@ -122,11 +138,11 @@
             <li><img src="pictures/work.png">Programmer Intern</li>
             <li><img src="pictures/office.png">DPWH Leyte 3rd District Engineering Office</li>
             <li><img src="pictures/medal.png">January 2023 - April 2023</li>
-        </ul><br><br><br><br><br><br>
+        </ul>
      </div>
     </div>
-    <h3>Technologies</h3>
-    <div class="tech">
+    <h3 data-aos="slide-down" data-aos-duration="1000">Technologies</h3>
+    <div class="tech" data-aos="slide-up" data-aos-duration="1000">
         <img src="pictures/tech/PHP.svg" title="PHP">
         <img src="pictures/tech/Html.svg" title="HTML">
         <img src="pictures/tech/CSS.svg" title="CSS">
@@ -143,8 +159,8 @@
 
 <!--Project Section-->
     <section id="project" class="project">
-        <h2> My <b style="color: #FEA47F;">Works</b></h2>
-         <div class="project-container project-container-reverse">
+        <h2 data-aos="fade-in" data-aos-duration="1000"> My <b style="color: #FEA47F;">Works</b></h2>
+         <div class="project-container project-container-reverse" data-aos="slide-up" data-aos-duration="1000">
             <div class="project-text">
                 <h4>ALUMNI INFORMATION MANAGEMENT SYSTEM</h4>
                 <p>This system is made to ease managing Alumni Information and Employability Status. It let them manage Alumni data, send survey form for the allumni and recieve data from survey form.<br><br>  </p>
@@ -164,7 +180,7 @@
             </div>
          </div>
 
-         <div class="project-container">
+         <div class="project-container" data-aos="slide-up" data-aos-duration="1000">
             <div class="project-img">
                <div class="visit-site-cover"><a href="./maintenance/maintenance.html">View more <img src="./pictures/visitsite.svg"></a></div>
                <video class="projectVideo" src="project/inventory.mp4" autoplay="1" loop="1" muted="1"></video>
@@ -185,7 +201,7 @@
             </div>
          </div>
 
-         <div class="project-container project-container-reverse">
+         <div class="project-container project-container-reverse" data-aos="slide-up" data-aos-duration="1000">
             <div class="project-text">
             <h4>SCHOOL MANAGEMENT SYSTEM</h4>
             <p>This system allows the teachers to direct manage and send report to the registrar and also the students an view grades through portal.</p>
@@ -204,7 +220,7 @@
                <img src="./project/SCHOOL MANAGEMENT SYSTEM.png">
             </div>
          </div>
-         <div class="project-container">
+         <div class="project-container" data-aos="slide-up" data-aos-duration="1000">
             <div class="project-img">
                <div class="visit-site-cover"><a href="https://joemharsalessdc.wixsite.com/segovia-group">View more <img src="./pictures/visitsite.svg"></a></div>
                <img src="project/wixwebsite.png" alt="wix">
@@ -223,8 +239,8 @@
 
     <!-- contact section  -->
     <section id="contact" class="contact">
-        <h2> Contact <b style="color: #FEA47F;">Me</b></h2>
-        <form action="">
+        <h2 data-aos="slide-up" data-aos-duration="1000"> Contact <b style="color: #FEA47F;">Me</b></h2>
+        <form action="" data-aos="zoom-out" data-aos-duration="1000">
            <div class="mail-con">
               <div class="input-wrapper contact-area">
                  <label for="name" class="label">Fullname *</label>
