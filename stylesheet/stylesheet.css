@@ -25,17 +25,12 @@
       justify-content: left;
       align-items: center;
   }
-  .name img{
-          width: 40px;
-          height:40px;   
-          padding-left: 25px;
-  }
   .name a{
       font-weight: bold;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Times New Roman', Times, serif;
       color: #FEA47F;
-      font-size: 25px;
-      padding-left: 10px;
+      font-size: 20px;
+      padding-left: 30px;
       cursor: pointer;
       text-decoration: none;
   }
@@ -82,7 +77,7 @@
       justify-content: center;
       align-items: center;
   }
-  .container{
+  .con{
       width: 100%;
       display: flex;
       justify-content: center;
@@ -220,7 +215,7 @@
       background: rgba(0, 0, 0, 0.8);
       padding: 20px;
       border: .03px solid #1e272e;
-      height: 400px;
+      height: 500px;
       border-radius: 7px;
   }
   .education ul{
@@ -487,14 +482,14 @@
       .home{
         min-height: 900px;
       }
-      .container{
+      .con{
       flex-direction: column-reverse;
+      padding-top: 60px;
       }
       .col1{
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 0 10% 0 10%;
         height: auto;
       }
       .col1 h1{
@@ -503,6 +498,9 @@
       .home h6{
         margin-top: 10px;
     }
+      .home p{
+        padding-right: 20px;
+      }
       .buttons{
           justify-content: space-around;
           padding: 0;
@@ -530,20 +528,19 @@
       }
       .project-container{
           gap: 0;
-          width: 90%;
-          padding: 0 5% 0 5%;
+          width: 100%;
       }
       .project-container-reverse{
           flex-direction: column-reverse;
       }
       .project-text{
-          width: 90%;
+          width: 100%;
       }
       .project-img{
-          width: 97%;
+          width: 100%;
       }
       .mail-con{
-          width: 90%;
+          width: 100%;
           flex-direction:column;
       }
       .contact-area{

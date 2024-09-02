@@ -6,6 +6,7 @@
     <title>Joemhar Sales</title>
     <link rel="icon" type="image/x-icon" href="pictures/myphoto.png">
     <link rel="stylesheet" href="stylesheet/stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
@@ -13,6 +14,9 @@
 <body>
 <!--header section-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- Bootstrap JS (with Popper.js for modals) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
     
  <!-- Initialize AOS -->
  <script>
@@ -28,8 +32,7 @@
 </script>
     <header class="header" data-aos="fade-down" data-aos-duration="1000">
         <div class="name">
-            <img src="pictures/man.png">
-            <a href="#home">JOEMHAR SALES</a>
+            <a href="#home">Joemhar Sales</a>
         </div>
         
         <nav class="menu">
@@ -42,8 +45,8 @@
 
     <!--Home Section-->
     <section id="home" class="home">
-        <div class="container">
-            <div class="col1" data-aos="slide-up" data-aos-duration="1000">
+        <div class="con">
+            <div class="col1" data-aos="slide-left" data-aos-duration="1000">
             <h6>Hi!<img src="pictures/hi.png">, I'm Joemhar Sales.</h6>
             <h1>Web <b style="color: #FEA47F;">Developer</b></h1>
             <p>If you'd like to collaborate or have any questions,
@@ -69,7 +72,7 @@
     </section>
     <!--About Section-->
     <section id="about" class="about">
-    <h2 data-aos="slide-right" data-aos-duration="1000"> About <b style="color: #FEA47F;">Me</b></h2>
+    <h2 data-aos="slide-up" data-aos-duration="1000"> About <b style="color: #FEA47F;">Me</b></h2>
     <div data-aos="zoom-in" data-aos-duration="1000">
         <p>As a seasoned web developer with expertise in HTML, CSS, JavaScript, Php, WordPress, and Wix, I offer comprehensive web development solutions tailored to meet your needs. Whether you're looking to create a stunning new website, enhance an existing one, or develop a custom web application, I can help you achieve your goals with precision and creativity.</p>
     </div>
@@ -175,14 +178,14 @@
                 <a href="https://github.com/Joemhar-dev/PIT_ALUMNI.git">Repository <img src="pictures/tech/Github.svg"></a>
             </div>
             <div class="project-img">
-               <div class="visit-site-cover"><a href="./maintenance/maintenance.html">View more <img src="./pictures/visitsite.svg"></a></div>
+               <div class="visit-site-cover"><a href="#" class="video-link" data-video-src="./project/alumniinformationsystem.mp4">View more <img src="./pictures/visitsite.svg"></a></div>
                <video class="projectVideo" src="project/alumniinformationsystem.mp4" autoplay="1" loop="1" muted="1"></video>
             </div>
          </div>
 
          <div class="project-container" data-aos="slide-up" data-aos-duration="1000">
             <div class="project-img">
-               <div class="visit-site-cover"><a href="./maintenance/maintenance.html">View more <img src="./pictures/visitsite.svg"></a></div>
+               <div class="visit-site-cover"><a href="#" class="video-link" data-video-src="./project/inventory.mp4">View more <img src="./pictures/visitsite.svg"></a></div>
                <video class="projectVideo" src="project/inventory.mp4" autoplay="1" loop="1" muted="1"></video>
 
             </div>
@@ -282,6 +285,63 @@
 
         });
     }; 
-    </script>   
+    </script> 
+    <!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Video Element -->
+                <video id="videoPlayer" class="w-100" controls>
+                    <source id="videoSource" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- JavaScript to Set Video Source and Play -->
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const videoLinks = document.querySelectorAll('.video-link');
+
+    videoLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link action
+            const videoSrc = this.getAttribute('data-video-src');
+            console.log('Video source:', videoSrc); // Log the video source
+            const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
+            const videoPlayer = document.getElementById('videoPlayer');
+            const videoSource = document.getElementById('videoSource');
+
+            // Set the video source
+            videoSource.src = videoSrc;
+            videoPlayer.load(); // Load the new source
+            videoModal.show(); // Show the modal
+
+            // Play the video automatically once the modal is shown
+            videoModal._element.addEventListener('shown.bs.modal', function () {
+                videoPlayer.play();
+            });
+        });
+    });
+
+    // Stop the video when the modal is closed
+    const videoModalElement = document.getElementById('videoModal');
+    videoModalElement.addEventListener('hidden.bs.modal', function () {
+        const videoPlayer = document.getElementById('videoPlayer');
+        videoPlayer.pause(); // Stop the video playback
+        videoPlayer.currentTime = 0; // Reset the video to the start
+    });
+});
+
+
+    </script>  
 </body>
 </html>
