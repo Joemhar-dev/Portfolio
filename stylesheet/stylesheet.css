@@ -516,6 +516,9 @@
           width: 200px;
           height: 300px;
       }
+      .about div{
+        width: 90%;
+      }
       .tech{
           margin-top: 0;
       }
@@ -526,18 +529,25 @@
       .background{
         flex-direction: column;
       }
+      .education{
+        height: auto;
+        width: 90%;
+      }
       .project-container{
           gap: 0;
           width: 100%;
+          padding: 0 2% 0 2%;
       }
       .project-container-reverse{
           flex-direction: column-reverse;
       }
       .project-text{
           width: 100%;
+          border-radius: 0;
       }
       .project-img{
           width: 100%;
+          border-radius: 0;
       }
       .mail-con{
           width: 100%;
